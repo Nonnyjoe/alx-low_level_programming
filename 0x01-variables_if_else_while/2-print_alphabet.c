@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: print all the alphabets in small caps
- * Result: return alphabets
+ *
+ * Description: Print all the alphabets in small caps
+ * Return: alphabets
  */
 int main(void)
 {
