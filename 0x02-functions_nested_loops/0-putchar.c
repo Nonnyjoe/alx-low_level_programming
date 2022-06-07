@@ -9,8 +9,8 @@
 int main(void)
 {
 char msg[] = "_putchar";
-int i = 1 ;
-_putchar(msg[i]);
+int i = 1;
+_putchar(msg);
 _putchar('\n');
 return (0);
 }
