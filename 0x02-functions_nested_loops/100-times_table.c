@@ -10,32 +10,35 @@
 
 void print_times_table(int n)
 {
-int i = 0;
-for (; i <= n; i++)
+int num;
+int m;
+int p;
+if (n >= 0 && n <= 15)
 {
-int g = 0;
-while (g <= n)
+for (num = 0; num <= n; num++)
 {
-int v = i * g;
-if (v > n)
+_putchar('0');
+for (m = 1; m <= n; m++)
 {
-_putchar (v / 10 + '0');
-_putchar (v % 10 + '0');
+_putchar(',');
+_putchar(' ');
+p = num * m;
+if (p <= 99)
+_putchar(' ');
+if (p <= 9)
+_putchar(' ');
+if (p >= 100)
+{
+_putchar((p / 100) + '0');
+_putchar(((p / 10)) % 10 + '0');
 }
-else if (g != 0)
+else if (p <= 99 && p >= 10)
 {
-_putchar (' ');
-_putchar (i * g + '0');
+_putchar((p / 10) + '0');
 }
-else
-_putchar (i * g + '0');
-if (g != n)
-{
-_putchar (',');
-_putchar (' ');
+_putchar((p % 10) + '0');
 }
-g++;
+_putchar('\n');
 }
-_putchar ('\n');
 }
 }
