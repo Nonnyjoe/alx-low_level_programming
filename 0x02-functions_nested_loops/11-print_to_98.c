@@ -12,23 +12,21 @@ void print_to_98(int n)
 {
 if (n > 98)
 {
-int a = n;
-for (a  = n ; a = 98; --a)
+for (; n = 98; --n)
 {
-printf("%d, ", a);
+printf("%d, ", n);
 }
 }
 else if (n < 98)
 {
-int a = n;
-for (a  = n ; a = 98; a++)
+for (; n = 98; n++)
 {
-printf("%d, ", a);
+printf("%d, ", n);
 }
 }
 else
 {
-int a = 98;
-printf("%d, ", a);
+int n = 98;
+printf("%d, ", n);
 }
 }
