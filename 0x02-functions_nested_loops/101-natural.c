@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * natural - prints all the sum of multiples of 3 or 5
+ * main - prints all the sum of multiples of 3 or 5
  * Return: zero.
  */
-int natural(void)
+int main(void)
 {
 int i, n;
 for (i = 0; i < 1024; i++)
