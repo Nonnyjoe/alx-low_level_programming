@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * natural - prints all the sum of multiples of 3 or 5
  * Return: zero.
