@@ -2,14 +2,13 @@
 
 /**
 * print_triangle - print a triangle
-* Return: Always return 0
+* Return: Always zero
 * @size: The charater to print
 */
 
 void print_triangle(int size)
 {
-	int row; 
-  int col;
+	int row, col;
 
 	if (size > 0)
 	{
@@ -27,4 +26,3 @@ void print_triangle(int size)
 		}
 	}
 	_putchar('\n');
-}
