@@ -2,12 +2,12 @@
 
 /**
 * print_triangle - print a triangle
-* Return: Always zero
+*
 * @size: The charater to print
 */
 
 void print_triangle(int size)
-}
+{
 	int row, col;
 
 	if (size > 0)
@@ -16,8 +16,10 @@ void print_triangle(int size)
 		{
 			for (col = size - row; col > 0; col--)
 				_putchar(' ');
+			
 			for (col = 0; col < row; col++)
 				_putchar('#');
+
 			if (row == size)
 				continue;
 			_putchar('\n');
