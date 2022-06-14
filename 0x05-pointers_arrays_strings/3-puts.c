@@ -1,5 +1,6 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdio.h>
 /**
  * _puts - Prints a given string
  * Return: zero
@@ -8,11 +9,5 @@
 
 void _puts(char *str)
 {
-int i = 0;
-while (*(str + i))
-{
-printf(str[1]);
-i++;
-}
-printf('\n');
+puts(str);
 }
