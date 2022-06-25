@@ -1,44 +1,23 @@
 #include "main.h"
-
 /**
- * wildcmp - compares two strings to determine if they are identical
- * @str1: first string parameter
- * @str2: second string parameter
- * Return: 1
+ * wildcmp - function that compares two strings and returns 1 if
+ * the strings can be considered identical, otherwise return 0.
+ * @s1: string
+ * @s2: string
+ * Return: 1 if the strings can be considered identical, otherwise return 0
  */
-
-int wildcmp(char *str1, char *str2)
+int wildcmp(char *s1, char *s2)
 {
-	if (*str1 == '\0' && *str2 == '\0')
-	{
-		return (1);
-	}
-	else if (*str1 == '\0' && *str2 == '*')
-	{
-		return (wildcmp(str1, (str2 + 1)));
-	}
-	else if (*str1 == '\0' || *str2 == '\0')
-	{
-		return (0);
-	}
-	if (*str1 == *str2)
-	{
-		return (wildcmp((str1 + 1), (str2 + 1)));
-	}
-	if (*str2 == '*')
-	{
-	if (*(str2 + 1) == '*')
-	{
-		return (wildcmp(str1, (str2 + 1)));
-	}
-	else if (wildcmp(str1, str2 + 1))
-	{
-		return (1);
-	}
-	else
-	{
-		return (wildcmp(str1 + 1, str2));
-	}
+if (*s1 == '\0' && *s2 == '\0')
+return (1);
+if (*s1 == *s2)
+return (wildcmp(s1 + 1, s2 + 1));
+if (*s2 == '*')
+{
+if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
+return (0);
+if (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1))
+return (1);
 }
-		return (0);
+return (0);
 }
